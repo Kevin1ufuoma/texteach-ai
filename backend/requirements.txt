@@ -8,3 +8,4 @@ langchain-google-genai==1.0.1
 pypdf==4.1.0
 faiss-cpu
 python-multipart
+streamlit
