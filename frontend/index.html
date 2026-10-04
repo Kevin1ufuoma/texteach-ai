@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Texteach AI - Your Smart Knowledge Companion</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="app-header">
+            <div class="logo-area">
+                <span class="icon">🎓</span>
+                <h1>Texteach AI App</h1>
+            </div>
+            <div class="system-status">
+                <span class="status-indicator online"></span>
+                <span id="status-text">Backend Active</span>
+            </div>
+        </header>
+
+        <main class="app-container">
+            <!-- Left Side: Ingestion Panel -->
+            <section class="control-panel">
+                <div class="card upload-card">
+                    <h2>📁 Step 1: Upload Knowledge</h2>
+                    <p class="subtitle">Upload a PDF chapter, study guide, or article to begin.</p>
+                    
+                    <div class="drop-zone" id="drop-zone">
+                        <span class="drop-icon">📄</span>
+                        <p>Drag & drop your PDF file here</p>
+                        <span class="or-divider">or</span>
+                        <label for="file-input" class="file-label">Browse Files</label>
+                        <input type="file" id="file-input" accept=".pdf" hidden>
+                    </div>
+                    
+                    <div class="file-details hidden" id="file-details">
+                        <div class="file-info">
+                            <span class="file-icon">📈</span>
+                            <span id="file-name">document.pdf</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="progress-bar"></div>
+                        </div>
+                        <span id="upload-status" class="status-msg">Processing chunks...</span>
+                    </div>
+                </div>
+
+                <div class="card rules-card">
+                    <h3>💡 Learning Tips</h3>
+                    <ul>
+                        <li>Upload documents one at a time for deep focal study.</li>
+                        <li>Ask the teacher to break topics down into <strong>analogies</strong>.</li>
+                        <li>Ask for short quiz questions to test your active retention!</li>
+                    </ul>
+                </div>
+                <div class="card clear-card" style="margin-top: 10px;">
+                    <button id="clear-btn" class="clear-session-btn">🔄 New File</button>
+                </div>
+            </section>
+
+            <!-- Right Side: Interaction Chat Window -->
+            <section class="chat-panel">
+                <div class="card chat-card">
+                    <h2>💬 Step 2: Ask Your Teacher</h2>
+                    
+                    <div class="chat-messages" id="chat-messages">
+                        <div class="message system-msg">
+                            <div class="avatar">🤖</div>
+                            <div class="bubble">
+                                Hello! I am your AI Teacher. Upload a study document in the step 1 section, and I will break down its contents, explain complex items, and help you review step-by-step. What are we studying today?
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chat-input-area">
+                        <input type="text" id="user-input" placeholder="Ask a targeted question about your document..." disabled>
+                        <button id="send-btn" disabled>Ask Teacher</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,6 @@
+backend/.env
+backend/venv/
+backend/vectorstore/
+backend/temp_uploads/
+__pycache__/
+.DS_Store
